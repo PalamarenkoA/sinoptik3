@@ -23,28 +23,23 @@ public class start extends AppCompatActivity {
 
         isNetwork = isNetworkAvailable();
         context = this;
-//        new Thread(new Runnable() {
-//            public void run() {
-//                try {
-//                    TimeUnit.SECONDS.sleep(3);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//                finish();
-//            }
-//        }
-//    ).start();
 
 
 
     }
+
+
     public boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager
                 = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
-
+    @Override
+    protected void onPause() {
+        super.onPause();
+       finish();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -48,7 +48,7 @@ public class MyService extends Service {
                         e.printStackTrace();
                     }
                     intentDownload = new Intent(context, start.class);
-                    intentApp = new Intent(context, Main2Activity.class);
+                    intentApp = new Intent(context, start.class);
                     PendingIntent pendingIntentApp = PendingIntent.getActivity(context, 0, intentApp, PendingIntent.FLAG_UPDATE_CURRENT);
                     PendingIntent pendingIntentDownload = PendingIntent.getActivity(context, 0, intentDownload, PendingIntent.FLAG_UPDATE_CURRENT);
                     builder = new NotificationCompat.Builder(context)
