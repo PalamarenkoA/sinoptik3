@@ -24,7 +24,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     private List<String> _listDataHeader;
     //Данные для элементов подпунктов:
     private HashMap<String, List<String>> _listDataChild;
-    private ArrayList listicon;
+    private ArrayList<String> listicon;
     int i = 0;
     public ExpandableListAdapter(Context context, List<String> listDataHeader,
                                  HashMap<String, List<String>> listChildData,ArrayList listicon) {
@@ -59,8 +59,15 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         int position = 0;
         if(groupPosition==0)position = childPosition;
         else position = childPosition+ (groupPosition-1)*8 + Main2Activity.day1.size();
-        Log.d("log", "Абсолютная позиция  - " +  position);
-        Picasso.with(Main2Activity.context).load("http://openweathermap.org/img/w/" + listicon.get(position) + ".png").into(((ImageView) convertView.findViewById(R.id.imageView2)));
+        Log.d("log", "Абсолютная позиция  - " + position);
+        if(start.isNetwork){
+        Picasso.with(Main2Activity.context)
+                .load("http://openweathermap.org/img/w/" + listicon.get(position) + ".png")
+                .into(((ImageView) convertView.findViewById(R.id.imageView2)));}
+        else{
+            ImageView imageView = (ImageView) convertView.findViewById(R.id.imageView2);
+            imageView.setImageResource(Helper.showIcon(listicon.get(position)));
+        }
         i++;
 
 

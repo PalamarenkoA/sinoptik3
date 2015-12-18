@@ -46,13 +46,16 @@ public class Main2Activity extends AppCompatActivity implements
         context = this;
         withDetails = getResources().getConfiguration().orientation
                 == Configuration.ORIENTATION_LANDSCAPE;
-        Log.d("orientation", "orientation " + withDetails);
         setContentView(R.layout.activity_main);
         context = this;
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.getBackgroundTintList();
+        Fragment frag1 = getSupportFragmentManager().findFragmentById(R.id.titles);
+    ExpandableListView expandableListView =(ExpandableListView) frag1.getView().findViewById(R.id.listView);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -19,6 +19,8 @@ static int showIcon(String icon){
   switch (icon){
       case("01d"):
           return R.drawable.icon01d;
+      case("02d"):
+          return R.drawable.icon02d;
       case ("01n"):
           return R.drawable.icon01n;
       case ("02n"):
@@ -33,6 +35,8 @@ static int showIcon(String icon){
           return R.drawable.icon10d;
       case ("13d"):
           return R.drawable.icon13d;
+
+
   }
 return 1;}
 }

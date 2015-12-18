@@ -18,11 +18,15 @@ public class start extends AppCompatActivity {
         setContentView(R.layout.content_start);
         Intent intent1 = new Intent(this, MyService.class);
         startService(intent1);
-        new Network().execute();
-
-
         isNetwork = isNetworkAvailable();
         context = this;
+        if(isNetwork){
+            new Network().execute();
+        }else{
+          Helper.showToast("Проверить соединение с интернетом", context);
+            startActivity( new Intent(this, Main2Activity.class));
+        }
+
 
 
 
