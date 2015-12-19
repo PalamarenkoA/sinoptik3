@@ -94,7 +94,7 @@ public class Main2Activity extends AppCompatActivity implements
                 setText(listhumidity.get(pos) + "%");
         ((TextView) details.getView()
                 .findViewById(R.id.speed)).
-                setText("v-" +listspeed.get(pos) );
+                setText("v-" + listspeed.get(pos));
 
         ((ImageView) details.getView()
                 .findViewById(R.id.imageView)).
@@ -140,8 +140,8 @@ public class Main2Activity extends AppCompatActivity implements
         ((ExpandableListView) frag1.getView().findViewById(R.id.listView)).setAdapter(listAdapter);
 
     }
-    protected void onPause() {
-        super.onPause();
+    protected void onStop() {
+        super.onStop();
         Log.d("log", "Закрытие");
         finish();
     }
