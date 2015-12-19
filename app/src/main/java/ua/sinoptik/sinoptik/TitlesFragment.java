@@ -13,8 +13,10 @@ import android.widget.ExpandableListView;
 /**
  * Created by Админ on 14.12.2015.
  */
-public class TitlesFragment extends Fragment {
+public class TitlesFragment extends Fragment  {
     final String LOG_TAG = "myLogs";
+
+
     public interface onItemClickListener {
         public void itemClick(int position, int groupPosition);
     }
@@ -22,12 +24,12 @@ public class TitlesFragment extends Fragment {
     ExpandableListView listView;
     onItemClickListener listener;
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         listener = (onItemClickListener) getActivity();
         View v = inflater.inflate(R.layout.titles, container, false);
-
         listView = (ExpandableListView) v.findViewById(R.id.listView);
         listView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
 

@@ -33,12 +33,14 @@ public class Main2Activity extends AppCompatActivity implements
     ArrayList<String> listhumidity;
     ArrayList<String> listspeed;
     ArrayList<String> listicon;
+
     static  ExpandableListAdapter listAdapter;
     SQLiteDatabase db;
     HashMap<String, List<String>> listDataChild;
     List<String> listDataHeader;
     static  ArrayList<String> day1;
     boolean withDetails = true;
+    FloatingActionButton fab;
     Cursor c;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,19 +53,18 @@ public class Main2Activity extends AppCompatActivity implements
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.getBackgroundTintList();
-        Fragment frag1 = getSupportFragmentManager().findFragmentById(R.id.titles);
-    ExpandableListView expandableListView =(ExpandableListView) frag1.getView().findViewById(R.id.listView);
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Helper.showToast("Обновление данных",context);
-                Intent intent = new Intent(context,start.class);
+                Helper.showToast("Обновление данных", context);
+                Intent intent = new Intent(context, start.class);
                 startActivity(intent);
             }
         });
+
         if (savedInstanceState != null) position = savedInstanceState.getInt("position");
         dbHelper = new DBHelper(this);
         db = dbHelper.getWritableDatabase();
@@ -134,11 +135,16 @@ public class Main2Activity extends AppCompatActivity implements
 
         listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild,listicon);
         Fragment frag1 = getSupportFragmentManager().findFragmentById(R.id.titles);
+
         Log.d("log", "frag " + frag1);
         ((ExpandableListView) frag1.getView().findViewById(R.id.listView)).setAdapter(listAdapter);
 
     }
-
+    protected void onPause() {
+        super.onPause();
+        Log.d("log", "Закрытие");
+        finish();
+    }
 
     @Override
     public void itemClick(int position, int groupPosition) {
