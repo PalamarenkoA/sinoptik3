@@ -68,6 +68,7 @@ public class Main2Activity extends AppCompatActivity implements
                 Helper.showToast("Обновление данных", context);
                 Intent intent = new Intent(context, start.class);
                 startActivity(intent);
+                finish();
             }
         });
 
