@@ -34,7 +34,7 @@ public class Main2Activity extends AppCompatActivity implements
     ArrayList<String> listspeed;
     ArrayList<String> listicon;
 
-    static  ExpandableListAdapter listAdapter;
+    static  ExpandableListAdapter listAdapter = null;
     SQLiteDatabase db;
     HashMap<String, List<String>> listDataChild;
     List<String> listDataHeader;
@@ -42,6 +42,12 @@ public class Main2Activity extends AppCompatActivity implements
     boolean withDetails = true;
     FloatingActionButton fab;
     Cursor c;
+
+    @Override
+    protected void onRestart(){
+        super.onRestart();
+        listAdapter = null;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -138,13 +144,10 @@ public class Main2Activity extends AppCompatActivity implements
 
         Log.d("log", "frag " + frag1);
         ((ExpandableListView) frag1.getView().findViewById(R.id.listView)).setAdapter(listAdapter);
+        listAdapter.notifyDataSetChanged();
 
     }
-    protected void onStop() {
-        super.onStop();
-        Log.d("log", "Закрытие");
-        finish();
-    }
+
 
     @Override
     public void itemClick(int position, int groupPosition) {

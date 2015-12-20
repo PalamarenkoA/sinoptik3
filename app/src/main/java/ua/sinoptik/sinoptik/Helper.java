@@ -29,6 +29,10 @@ static int showIcon(String icon){
           return R.drawable.icon03n;
       case ("04n"):
           return R.drawable.icon04n;
+      case ("03d"):
+          return R.drawable.icon03n;
+      case ("04d"):
+          return R.drawable.icon04n;
       case ("10n"):
           return R.drawable.icon10n;
       case ("10d"):

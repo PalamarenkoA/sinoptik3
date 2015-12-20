@@ -109,6 +109,7 @@ public class Network extends AsyncTask<Void, Void, Boolean> {
             start.context.startActivity(new Intent(start.context, Main2Activity.class).addFlags(
                     Intent.FLAG_ACTIVITY_TASK_ON_HOME));
         }
+
     }
     public String readIt(InputStream stream) throws IOException {
 
