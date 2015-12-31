@@ -1,4 +1,4 @@
-package ua.sinoptik.sinoptik;
+package ua.sinoptik.sinoptik.Activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -23,10 +23,18 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
+import ua.sinoptik.sinoptik.DBHelper;
+import ua.sinoptik.sinoptik.ExpandableListAdapter;
+import ua.sinoptik.sinoptik.Fragment.TitlesFragment;
+import ua.sinoptik.sinoptik.Helper;
+import ua.sinoptik.sinoptik.R;
+
+
 public class Main2Activity extends AppCompatActivity implements
         TitlesFragment.onItemClickListener {
-    static int position = 0;
-    static Context context;
+    public static int position = 0;
+    public static Context context;
+    public static  ArrayList<String> day1;
     DBHelper dbHelper;
     ArrayList<String> listdate;
     ArrayList<String> listtemp;
@@ -34,11 +42,11 @@ public class Main2Activity extends AppCompatActivity implements
     ArrayList<String> listspeed;
     ArrayList<String> listicon;
 
-    static  ExpandableListAdapter listAdapter = null;
+    static ExpandableListAdapter listAdapter = null;
     SQLiteDatabase db;
     HashMap<String, List<String>> listDataChild;
     List<String> listDataHeader;
-    static  ArrayList<String> day1;
+
     boolean withDetails = true;
     FloatingActionButton fab;
     Cursor c;
@@ -101,7 +109,7 @@ public class Main2Activity extends AppCompatActivity implements
                 setText(listhumidity.get(pos) + "%");
         ((TextView) details.getView()
                 .findViewById(R.id.speed)).
-                setText("v-" + listspeed.get(pos));
+                setText(listspeed.get(pos));
 
         ((ImageView) details.getView()
                 .findViewById(R.id.imageView)).

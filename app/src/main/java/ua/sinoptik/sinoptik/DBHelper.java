@@ -4,6 +4,8 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import ua.sinoptik.sinoptik.Activity.start;
+
 /**
  * Created by Админ on 14.12.2015.
  */

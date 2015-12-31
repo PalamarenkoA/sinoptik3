@@ -7,7 +7,7 @@ import android.widget.Toast;
  * Created by Админ on 16.12.2015.
  */
 public class Helper {
-    static void showToast(String text, Context context) {
+  public  static void showToast(String text, Context context) {
         //создаем и отображаем текстовое уведомление
         Toast toast = Toast.makeText(context,
                 text,
@@ -15,8 +15,10 @@ public class Helper {
         toast.show();
     }
 
-static int showIcon(String icon){
+public static int showIcon(String icon){
   switch (icon){
+      case("13n"):
+          return R.drawable.icon13n;
       case("01d"):
           return R.drawable.icon01d;
       case("02d"):
@@ -42,5 +44,5 @@ static int showIcon(String icon){
 
 
   }
-return 1;}
+return R.drawable.icon_na;}
 }

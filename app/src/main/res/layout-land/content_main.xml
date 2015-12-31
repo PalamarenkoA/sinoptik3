@@ -20,7 +20,7 @@
 
         <fragment
             android:id="@+id/titles"
-            android:name="ua.sinoptik.sinoptik.TitlesFragment"
+            android:name="ua.sinoptik.sinoptik.Fragment.TitlesFragment"
             android:layout_width="300dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -29,7 +29,7 @@
 
         <fragment
             android:id="@+id/details"
-            android:name="ua.sinoptik.sinoptik.DetailsFragment"
+            android:name="ua.sinoptik.sinoptik.Fragment.DetailsFragment"
             android:layout_width="300dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

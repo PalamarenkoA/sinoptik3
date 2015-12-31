@@ -1,4 +1,4 @@
-package ua.sinoptik.sinoptik;
+package ua.sinoptik.sinoptik.Activity;
 
 import android.content.res.Configuration;
 import android.database.Cursor;
@@ -11,6 +11,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import ua.sinoptik.sinoptik.Activity.Main2Activity;
+import ua.sinoptik.sinoptik.DBHelper;
+import ua.sinoptik.sinoptik.Helper;
+import ua.sinoptik.sinoptik.R;
 
 /**
  * Created by Админ on 14.12.2015.

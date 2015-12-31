@@ -1,4 +1,4 @@
-package ua.sinoptik.sinoptik;
+package ua.sinoptik.sinoptik.Activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,9 +9,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import ua.sinoptik.sinoptik.Helper;
+import ua.sinoptik.sinoptik.MyService;
+import ua.sinoptik.sinoptik.Network;
+import ua.sinoptik.sinoptik.R;
+
 public class start extends AppCompatActivity {
-    static boolean isNetwork;
-    static Context context;
+   public static boolean isNetwork;
+   public static Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

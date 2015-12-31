@@ -17,6 +17,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import ua.sinoptik.sinoptik.Activity.Main2Activity;
+import ua.sinoptik.sinoptik.Activity.start;
+
 public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
     private Context _context;

@@ -16,6 +16,8 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.concurrent.TimeUnit;
 
+import ua.sinoptik.sinoptik.Activity.start;
+
 
 public class MyService extends Service {
     private Intent intentDownload;

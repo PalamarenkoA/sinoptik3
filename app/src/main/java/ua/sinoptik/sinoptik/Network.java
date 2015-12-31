@@ -18,6 +18,10 @@ import java.io.Reader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import ua.sinoptik.sinoptik.Activity.Main2Activity;
+import ua.sinoptik.sinoptik.Activity.start;
+
+
 /**
  * Created by Админ on 14.12.2015.
  */

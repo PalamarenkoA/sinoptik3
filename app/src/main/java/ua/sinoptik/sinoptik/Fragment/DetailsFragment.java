@@ -1,10 +1,12 @@
-package ua.sinoptik.sinoptik;
+package ua.sinoptik.sinoptik.Fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import ua.sinoptik.sinoptik.R;
 
 /**
  * Created by Админ on 14.12.2015.

@@ -17,75 +17,90 @@
     </TextView>
 
     <LinearLayout
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:orientation="vertical"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content">
 
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="50dp"
-                android:id="@+id/imageView4"
-                android:src="@drawable/t"/>
-            <TextView
-                android:id="@+id/temp"
-                android:layout_width="80dp"
-                android:layout_height="50dp"
-                android:text="температура"
-                android:textSize="30sp"
-                />
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="50dp"
-                android:id="@+id/imageView5"
-                android:src="@drawable/f"/>
-            <TextView
-                android:id="@+id/humidity"
-                android:layout_width="80dp"
-                android:layout_height="50dp"
-                android:text="температура"
-                android:textSize="30sp" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="50dp"
-                android:id="@+id/imageView6"
-                android:src="@drawable/v"/>
-
-            <TextView
-                android:id="@+id/speed"
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text="температура"
-                android:textSize="30sp"
-                android:layout_gravity="top|left|center_vertical"
-               />
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/imageView4"
+                    android:src="@drawable/t"/>
+                <TextView
+                    android:id="@+id/temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="температура"
+                    android:textSize="30sp"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/imageView5"
+                    android:src="@drawable/f"/>
+
+                <TextView
+                    android:id="@+id/humidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="температура"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/imageView6"
+                    android:src="@drawable/v"/>
+
+                <TextView
+                    android:id="@+id/speed"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="температура"
+                    android:textSize="30sp"
+                    android:layout_gravity="top|left|center_vertical"
+                   />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView2"
+                android:layout_weight="1" />
+
         </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/textView2"
-            android:layout_weight="1" />
-
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView"
+            android:layout_gravity="center_horizontal" />
     </LinearLayout>
-
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:id="@+id/imageView"
-        android:layout_gravity="center_horizontal" />
 
 </LinearLayout>
